@@ -1,10 +1,9 @@
 from sqlalchemy import JSON, Column, DateTime, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base()
+from app.database import Base
 
 
-class APIModel(Base):
+class APIBase(Base):
     __tablename__ = "api_model"
 
     id = Column(Integer, primary_key=True, index=True)
